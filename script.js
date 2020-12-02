@@ -13,7 +13,7 @@ function getSearchMethod(searchCity) {
 function searchWeather(searchCity) {
         getSearchMethod(searchCity);
 
-        fetch(`http://api.openweathermap.org/data/2.5/weather?${searchType}=${searchCity}&APPID=${appId}&units=${units}`).then(result => {
+        fetch(`https://api.openweathermap.org/data/2.5/weather?${searchType}=${searchCity}&APPID=${appId}&units=${units}`).then(result => {
             return result.json();
         }).then(result => {
             backPic(result);
